@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'image_path'); ?>
-		<?php echo CHtml::activeFileField($model,'image_path',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->textField($model,'image_path',array('size'=>60,'maxlength'=>200)); ?>
 		<?php echo $form->error($model,'image_path'); ?>
 	</div>
 

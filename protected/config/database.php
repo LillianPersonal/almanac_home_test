@@ -12,3 +12,12 @@ return array(
 	'charset' => 'utf8',
 	
 );
+
+
+/*CREATE TABLE AlmanacPost
+(
+	id INTEGER NOT NULL PRIMARY KEY auto_increment,
+	text VARCHAR(200) NOT NULL,
+	image_path VARCHAR(200) NOT NULL
+);
+*/

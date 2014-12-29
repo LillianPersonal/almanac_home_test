@@ -3,11 +3,11 @@
 /* @var $data AlmanacPost */
 ?>
 
-<div class="view" style="border:1px solid black;">
+<div class="view">
 
-	<!--<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />-->
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('text')); ?>:</b>
 	<?php echo CHtml::encode($data->text); ?>

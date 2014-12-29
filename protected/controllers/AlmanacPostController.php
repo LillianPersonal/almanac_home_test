@@ -70,7 +70,21 @@ class AlmanacPostController extends Controller
 		if(isset($_POST['AlmanacPost']))
 		{
 			$model->attributes=$_POST['AlmanacPost'];
-			$model->save();
+			//$model->save();
+			//$model->image_path = CUploadedFile::getInstance($model,'image_path');
+			if($model->save())          
+				$fullImgSource = Yii::getPathOfAlias('webroot').'/testing/almanac_test/images/'.$model->image_path;
+				$model->image_path->saveAs($fullImgSource);
+			
+			/*
+			 $model->attributes=$_POST['Pictures'];
+	        $model->url = CUploadedFile::getInstance($model,'url');
+	        if($model->save())          
+	            $fullImgSource = Yii::getPathOfAlias('webroot').'/granados/images/'.$model->url;
+	            $model->url->saveAs($fullImgSource);
+	            $this->redirect(array('view','id'=>$model->id));   
+
+			*/
 			/*if($model->save())
 				$this->redirect(array('view','id'=>$model->id));*/
 		}
